@@ -26,6 +26,50 @@ animate();
 
 
 
+const track = document.getElementById('sliderTrack');
+const originalCards = Array.from(track.children);
+const cardCount = originalCards.length;
+
+console.log(track)
+
+if (cardCount > 3) {
+   
+    originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        track.appendChild(clone);
+    });
+
+    let currentTranslate = 0;
+    const speed = 1; 
+    
+    function moveSlider() {
+        currentTranslate -= speed;
+        
+        const resetPoint = (350 + 30) * cardCount;
+        
+        if (Math.abs(currentTranslate) >= resetPoint) {
+            currentTranslate = 0;
+        }
+        
+        track.style.transform = `translateX(${currentTranslate}px)`;
+        requestAnimationFrame(moveSlider);
+    }
+
+   
+    moveSlider();
+
+    
+    let isPaused = false;
+    track.addEventListener('mouseenter', () => {  });
+} else {
+    
+    track.style.justifyContent = "center";
+    track.style.width = "100%";
+}
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const reviews = document.querySelectorAll('.review-item');
     let currentReview = 0;
@@ -48,3 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(nextReview, 6000);
 });
 
+
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselItems = carouselTrack.innerHTML;
+carouselTrack.innerHTML += carouselItems;
