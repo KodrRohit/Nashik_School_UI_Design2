@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Bosco Alumni </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #002366;
+            --secondary-blue: #0056b3;
+            --bg-light: #f4f7fa;
+            --text-dark: #1a202c;
+            --white: #ffffff;
+            --primary: #1e3a8a;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        /* Hero Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+            clip-path: polygon(0% 0%, 100% 0, 100% 86%, 52% 96%, 0 87%);
+            color: var(--white);
+            /* border-bottom-right-radius: 180px;
+            border-bottom-left-radius: 180px; */
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            top: 0;
+            z-index: -1;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 30px;
+        }
+        /* Links Section */
+        .links-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .alumni-link {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid #edf2f7;
+        }
+        .alumni-link i {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            color: var(--secondary-blue);
+        }
+        .alumni-link:hover {
+            background: var(--secondary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 86, 179, 0.2);
+        }
+        .alumni-link:hover i {
+            color: var(--white);
+        }
+        /* Sidebar Illustration Area */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .illustration-box {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+        .illustration-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+        .info-card {
+            background: #eef2ff;
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 5px solid var(--secondary-blue);
+        }
+        .info-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-navy);
+        }
+        #demo-message-box {
+            max-width: 1200px;
+            margin: 20px auto 80px;
+            padding: 30px;
+            background: #eef2ff;
+            border-radius: 10px;
+            /* border-left: 8px solid var(--secondary-blue); */
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        #demo-message-box h2 {
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                margin-top: 20px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alumni Portal</h1>
+        <p>Don Bosco High School & Junior College, Nashik</p>
+    </header>
+    <div class="container">
+        <div class="links-card">
+            <div class="links-grid">
+                <a href="#" class="alumni-link"><i class="fas fa-users"></i>
+                    Batches/Group</a>
+                <a href="#" class="alumni-link"><i class="fas fa-eye"></i>
+                    Vision</a>
+                <a href="#" class="alumni-link"><i class="fas fa-history"></i>
+                    History</a>
+                <a href="#" class="alumni-link"><i class="fas fa-scroll"></i>
+                    Preamble</a>
+                <a href="#" class="alumni-link"><i
+                        class="fas fa-hands-praying"></i> Prayer</a>
+                <a href="#" class="alumni-link"><i
+                        class="fas fa-envelope-open-text"></i> Provincial's
+                    Message</a>
+                <a href="#" class="alumni-link"><i
+                        class="fas fa-user-group"></i> Provincial's Team</a>
+                <a href="#" class="alumni-link"><i class="fas fa-user-tie"></i>
+                    Provincial's Delegate</a>
+                <a href="#" class="alumni-link"><i
+                        class="fas fa-user-check"></i> President of Past Pupil
+                    Association</a>
+                <a href="#" class="alumni-link"><i
+                        class="fas fa-map-location-dot"></i> Province Units</a>
+                <a href="#" class="alumni-link"><i class="fas fa-sitemap"></i>
+                    Management Team</a>
+                <a href="#" class="alumni-link"><i
+                        class="fas fa-users-gear"></i> Past Pupil Core
+                    Committee</a>
+                <a href="#" class="alumni-link"><i
+                        class="fas fa-users-viewfinder"></i> Past Pupil Active
+                    Committee</a>
+                <a href="#" class="alumni-link"><i
+                        class="fas fa-users-slash"></i> Past Pupil Passive
+                    Committee</a>
+                <a href="#" class="alumni-link"><i
+                        class="fa-solid fa-people-carry-box"></i> Members Of
+                    Past Pupil Association</a>
+                <a href="#" class="alumni-link"><i
+                        class="fa-solid fa-clipboard-list"></i> Minutes Of The
+                    Meeting</a>
+                <a href="#" class="alumni-link"><i
+                        class="fa-solid fa-photo-film"></i> Photos</a>
+                <a href="#" class="alumni-link"><i
+                        class="fa-solid fa-video"></i> Videos</a>
+                <a href="#" class="alumni-link"><i
+                        class="fa-solid fa-user-plus"></i> Registration</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="illustration-box">
+                <img src="https://www.donbosconashik.com/public/assets/images/school_media/logo/31032025075302pm.jpg"
+                    alt="Alumni Illustration">
+                <!-- <p style="margin-top: 15px; font-weight: 700; color: var(--primary-navy);">Connecting the Past with the Future</p> -->
+            </div>
+        </div>
+        <div id="demo-message-box">
+            <h2 id="msg-title">Information</h2>
+            <p id="msg-content">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Iusto dolores quaerat rem dicta sequi cum
+                laudantium enim itaque praesentium deleniti!</p>
+        </div>
+    </div>
+    <script>
+        const links = document.querySelectorAll('.alumni-link');
+        const messageBox = document.getElementById('demo-message-box');
+        const msgTitle = document.getElementById('msg-title');
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const linkText = this.innerText.trim();
+                msgTitle.innerText = "Alumni : " + linkText;
+                messageBox.style.display = 'block';
+                messageBox.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Bosco - Sakhi Savitri Committee</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --accent: #facc15;
+            --sidebar-bg: #ffffff;
+            --bg-light: #f1f5f9;
+            --text-main: #1e293b;
+            --primar: #1e3a8a;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* --- Header Section (Image madhe hota tasa) --- */
+        header {
+             background: linear-gradient(135deg, var(--primar) 0%, #1e40af 100%);
+            padding: 20px 2%;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            gap: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            z-index: -1;
+        }
+        .header-logo img {
+            width: 100px;
+            
+        }
+        .header-text {
+            text-align: center;
+        }
+        .header-text h1 {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .header-text p {
+            font-size: 0.85rem;
+            color: #eaeaea;
+            padding-top: 10px;
+            font-weight: 600;
+        }
+        /* --- Layout --- */
+        .wrapper {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 110px);
+            /* Header height vajah karun */
+        }
+        /* --- Improved Sidebar --- */
+        .sidebar {
+            width: 320px;
+            background: var(--sidebar-bg);
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #e2e8f0;
+            overflow-y: auto;
+        }
+        .sidebar-title {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+        .nav-item {
+            padding: 15px 20px;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            color: #475569;
+            font-weight: 600;
+            border: 1px solid transparent;
+        }
+        .nav-item i {
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+        }
+        /* Hover & Active Effects */
+        .nav-item:hover {
+            background-color: #f8fafc;
+            color: var(--primary);
+            border-color: #e2e8f0;
+            transform: translateX(5px);
+        }
+        .nav-item.active {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2);
+        }
+        .nav-item.active i {
+            color: var(--accent);
+        }
+        /* --- Content Area --- */
+        .content-area {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            overflow-y: auto;
+        }
+        .info-card {
+            background: white;
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+            animation: slideUp 0.5s ease;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .display-box {
+            text-align: center;
+        }
+        .display-box img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: contain;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            background: #f8fafc;
+        }
+        .display-box h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        .display-box p {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.8;
+            text-align: justify;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .wrapper {
+                flex-direction: column;
+                height: auto;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            header h1 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <img src="https://www.donbosconashik.com/public/assets/images/school_media/logo/31032025075302pm.jpg"
+                alt="School Logo">
+        </div>
+        <div class="header-text">
+            <h1>Don Bosco High School & Junior College, Nashik</h1>
+            <p>Don Bosco Marg, Off. H.P.T. College Road, Nashik.422005</p>
+        </div>
+    </header>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <span class="sidebar-title">Child Protection</span>
+            <div class="nav-item active" onclick="showContent('intro', this)">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>प्रस्तावना (Introduction)</span>
+            </div>
+            <div class="nav-item" onclick="showContent('objectives', this)">
+                <i class="fas fa-bullseye"></i>
+                <span>उद्दिष्टे (Objectives)</span>
+            </div>
+            <div class="nav-item" onclick="showContent('school', this)">
+                <i class="fas fa-users"></i>
+                <span>शाळा समिती (School Committee)</span>
+            </div>
+            <div class="nav-item" onclick="showContent('centre', this)">
+                <i class="fas fa-landmark"></i>
+                <span>केंद्रस्तरीय समिती</span>
+            </div>
+            <div class="nav-item" onclick="showContent('act24', this)">
+                <i class="fas fa-images"></i>
+                <span>Activities (2024 - 2025)</span>
+            </div>
+            <div class="nav-item" onclick="showContent('act25', this)">
+                <i class="fas fa-star"></i>
+                <span>Activities (2025 - 2026)</span>
+            </div>
+        </aside>
+        <main class="content-area">
+            <div class="info-card" id="infoCard">
+                <div class="display-box">
+                    <img src="https://via.placeholder.com/800x400/1e3a8a/ffffff?text=Sakhi+Savitri+Samiti"
+                        alt="Sakhi Savitri Info">
+                    <h2>प्रस्तावना (Introduction)</h2>
+                    <p>
+                        सखी सावित्री समिती ही शालेय स्तरावर विद्यार्थिनींच्या
+                        सुरक्षिततेसाठी आणि सर्वांगीण विकासासाठी स्थापन करण्यात
+                        आली आहे। या समितीच्या माध्यमातून मुलींच्या समस्यांचे
+                        निराकरण करणे आणि त्यांना शिक्षणासाठी प्रोत्साहित करणे हे
+                        मुख्य ध्येय आहे। शाळेत सुरक्षित आणि पोषक वातावरण निर्माण
+                        करण्यासाठी ही समिती कटिबद्ध आहे।
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const dataMap = {
+            'intro': {
+                title: 'प्रस्तावना (Introduction)',
+                img: 'https://via.placeholder.com/800x400/1e3a8a/ffffff?text=Introduction+Poster',
+                text: 'सखी सावित्री समिती ही शालेय स्तरावर विद्यार्थिनींच्या सुरक्षिततेसाठी आणि सर्वांगीण विकासासाठी स्थापन करण्यात आली आहे। मुलींना शाळेत सुरक्षित वातावरण मिळावे आणि त्यांच्या समस्यांना व्यासपीठ मिळावे हा या उपक्रमाचा मुख्य उद्देश आहे।'
+            },
+            'objectives': {
+                title: 'उद्दिष्टे (Objectives)',
+                img: 'https://via.placeholder.com/800x400/facc15/000000?text=Objectives+Poster',
+                text: '१. विद्यार्थिनींच्या गळतीचे प्रमाण कमी करणे। २. बालविवाह रोखणे। ३. मुलींच्या आरोग्याविषयी आणि स्वसंरक्षणाविषयी जनजागृती करणे। ४. विद्यार्थिनींमध्ये आत्मविश्वास निर्माण करणे।'
+            },
+            'school': {
+                title: 'शाळा समिती (School Committee)',
+                img: 'https://via.placeholder.com/800x400/10b981/ffffff?text=School+Committee',
+                text: 'शाळा स्तरावर प्राचार्य, शिक्षक प्रतिनिधी, पालक प्रतिनिधी आणि विद्यार्थिनी प्रतिनिधी मिळून ही समिती कार्य करते। स्थानिक स्तरावरील समस्यांचे निवारण येथे केले जाते।'
+            },
+            'centre': {
+                title: 'केंद्रस्तरीय समिती',
+                img: 'https://via.placeholder.com/800x400/6366f1/ffffff?text=Centre+Committee',
+                text: 'केंद्रस्तरावर ही समिती मोठ्या भौगोलिक क्षेत्रातील शाळांच्या उपक्रमांचे संनियंत्रण करते आणि आवश्यक मार्गदर्शक सूचना देते।'
+            },
+            'act24': {
+                title: 'Activities (2024 - 2025)',
+                img: 'https://via.placeholder.com/800x400/ec4899/ffffff?text=Activities+24-25',
+                text: '२०२४-२५ या शैक्षणिक वर्षात राबवण्यात आलेले उपक्रम: स्वसंरक्षण शिबिर, किशोरवयीन आरोग्य मार्गदर्शन आणि वक्तृत्व स्पर्धा।'
+            },
+            'act25': {
+                title: 'Activities (2025 - 2026)',
+                img: 'https://via.placeholder.com/800x400/f97316/ffffff?text=Activities+25-26',
+                text: '२०२५-२६ साठी नियोजित उपक्रम: करिअर मार्गदर्शन, सायबर सुरक्षा जनजागृती आणि क्रीडा महोत्सव।'
+            }
+        };
+        function showContent(key, element) {
+            // Sidebar active state change
+            document.querySelectorAll('.nav-item').forEach(item => item
+                .classList.remove('active'));
+            element.classList.add('active');
+            const card = document.getElementById('infoCard');
+            const data = dataMap[key];
+            // Update content with animation
+            card.style.animation = 'none';
+            card.offsetHeight; /* trigger reflow */
+            card.style.animation = 'slideUp 0.5s ease';
+            card.innerHTML = `
+                <div class="display-box">
+                    <img src="${data.img}" alt="${data.title}">
+                    <h2>${data.title}</h2>
+                    <p>${data.text}</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
